@@ -1,6 +1,10 @@
 const express = require('express');
+var connectDB = require('./config/db');
  
 const app = express();
+
+//connect database
+connectDB();
 
 app.get('/', (req,res) =>
  res.json({msg:'Hellow   we are here'}));
